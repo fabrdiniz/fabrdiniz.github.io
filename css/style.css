@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+    --main-black: #181717;
+    --main-gray: #606060;
+    --main-white: #F3F3F3;
+    --transition: .9s;
+    /* Teste para tamanhos de fonte*/
+    --heading1: 6rem;
+    --heading2: 3.2rem;
+    --body: 1.8rem;
+    --navigation: 2.1rem;
+    --sub-text: 1.4rem;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--main-white);
+    scroll-behavior: smooth;
+    /* margin-top: 15rem; CASO EU DEIXE A NAVBAR FIXA */
+}
+
+/* NAV */
+
+#menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+    background-color: var(--main-white);
+    box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.2);
+    /* position: fixed; DEIXAR A NAV BAR FIXA
+    top: 0;
+    left: 0;
+    z-index: 1; */
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: var(--main-black);
+    font-size: var(--heading2);
+    font-weight: 550;
+    transition: var(--transition);
+}
+
+.nav-logo h1 {
+    transition: var(--transition);
+}
+
+.nav-logo h1:hover {
+    transform: scale(1.1);
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    padding: 1.5rem;
+    font-weight: 450;
+    font-size: var(--navigation);
+    transition: var(--transition);
+}
+
+.nav-menu li:hover {
+    transform: scale(1.1);
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--main-black);
+    transition: var(--transition);
+}
+
+/* FIM NAV BAR */
+
+/* HERO */
+
+.hero {
+    width: 73%;
+    padding: 5rem;
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "titulo job"
+        "paragrafo job";
+}
+
+.hero h1 {
+    color: var(--main-black);
+    font-size: var(--heading1);
+    font-weight: 550;
+    grid-area: titulo;
+}
+
+.hero h3 {
+    grid-area: paragrafo;
+    color: var(--main-gray);
+    font-size: var(--navigation);
+}
+
+.hero p {
+    color: var(--main-gray);
+    font-size: var(--heading2);
+    text-align: end;
+    grid-area: job;
+}
+
+.hero img { /* PRECISO AJUSTAR A ÁREA CLICÁVEL DA SETA */
+    width: 4rem;
+    padding-top: 5rem;
+}
+
+/* FIM HERO */
+
+/* PROJETOS */
+
+.projeto-container {
+    margin: 0 auto;
+    width: 65%;
+    /* padding-top: 6rem; */
+}
+
+.projeto-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    grid-template-areas: 
+        "titulo gif"
+        "descricao gif"
+        "link gif";
+    justify-items: start;
+    align-items: center;
+    margin: 10rem 0;
+}
+
+.projeto-box h2 {
+    grid-area: titulo;
+    color: var(--main-black);
+}
+
+.projeto-box p {
+    grid-area: descricao;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    color: var(--main-black);
+}
+
+.projeto-box a {
+    grid-area: link;
+    color: var(--main-black);
+    font-weight: 800;
+}
+
+.projeto-box img {
+    width: 100%;
+    grid-area: gif;
+}
+
+.projeto-texto {
+    width: 60%;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+/* FIM PROJETOS */
+
+/* SOBRE MIM */
+
+.sobre-mim {
+    max-width: 70%;
+    max-height: 80vh;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+    grid-template-areas: 
+        "titulo foto"
+        "texto foto"
+        "texto foto";
+}
+
+.sobre-mim img {
+    width: 100%;
+    height: auto;
+    border-radius: 6rem;
+    transform: scale(0.7);
+    grid-area: foto;
+    align-self: flex-start;
+}
+
+.sobre-mim h2 {
+    font-size: var(--heading1);
+    grid-area: titulo;
+}
+
+.sobre-mim p {
+    font-size: 2.4rem;
+    padding-block: 2rem;
+    color: var(--main-gray);
+    grid-area: texto;
+}
+
+.texto-sobre-mim {
+    width: 70%;
+}
+
+/* FIM SOBRE MIM */
+
+/* ENTRE EM CONTATO */
+
+.contato {
+    width: 70%;
+    margin: 5rem auto;
+}
+
+.contato h2 {
+    font-size: var(--heading1);
+}
+
+.contato p {
+    font-size: 2rem;
+    color: var(--main-gray);
+    padding-block: 2rem;
+}
+
+/* FIM ENTRE EM CONTATO */
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem;
+    align-items: center;
+    box-shadow: 0px -10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+}
+
+footer li {
+    padding: 1.5rem;
+    font-weight: 450;
+    font-size: var(--navigation);
+    color: var(--main-black);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+footer h3 {
+    color: var(--main-black);
+}
