@@ -90,9 +90,11 @@ body {
     z-index: 10002;
     font-size: 3rem;
     position: absolute;
+    top: 0;
     right: 0;
-    margin-right: 5%;
+    margin: 5.5rem 5%;
     display: none;
+    z-index: 999;
 }
 
 .menu-mobile {
