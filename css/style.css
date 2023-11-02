@@ -165,8 +165,10 @@ body {
 }
 
 .projeto-box img {
+    border-radius: 1rem;
     width: 100%;
     grid-area: gif;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.7);
 }
 
 .projeto-texto {
@@ -180,7 +182,7 @@ body {
 /* SOBRE MIM */
 /* USANDO GRID */
 
-.sobre-mim {
+/* .sobre-mim {
     max-width: 70%;
     max-height: 80vh;
     margin: 5rem auto;
@@ -217,6 +219,43 @@ body {
 
 .texto-sobre-mim {
     width: 70%;
+} */
+
+.sobre-mim {
+    width: 70%;
+    margin: 5rem auto;
+    display: flex;
+}
+
+.sobre-mim .esquerda {
+    width: 50%;
+    max-height: 70%;
+}
+
+.sobre-mim .esquerda .titulo h2 {
+    font-size: var(--heading1);
+}
+
+.sobre-mim .esquerda .texto p {
+    width: 70%;
+    font-size: 2.4rem;
+    padding-block: 2rem;
+    color: var(--main-gray);
+}
+
+.sobre-mim .direita {
+    width: 50%;
+}
+
+.sobre-mim .direita img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    border-radius: 5rem;
+    width: 100%;
+    max-height: 80%;
+    object-fit: cover;
 }
 
 /* FIM SOBRE MIM */
