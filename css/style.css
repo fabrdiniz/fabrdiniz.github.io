@@ -10,7 +10,7 @@
     --main-gray: #606060;
     --main-white: #F3F3F3;
     --transition: .9s;
-    /* Teste para tamanhos de fonte*/
+    /* Tamanhos de fonte*/
     --heading1: 6rem;
     --heading2: 3.2rem;
     --body: 1.8rem;
@@ -83,45 +83,64 @@ body {
     transition: var(--transition);
 }
 
+/* NAV MOBILE */
+
+.btn-abrir-menu i {
+    color: #5C5C5C;
+    z-index: 10002;
+    font-size: 3rem;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    display: none;
+}
+
+.menu-mobile {
+    background-color: var(--main-white);
+    box-shadow: -10px 0px 20px -5px rgba(0, 0, 0, 0.2);;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 0%;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile ul{
+    text-align: right;
+    list-style: none;
+    padding: 5rem 3rem;
+}
+
+.menu-mobile li {
+    padding-block: 1.5rem;
+}
+
+.menu-mobile a {
+    text-decoration: none;
+    color: var(--main-black);
+    font-size: var(--heading2);
+}
+
+.menu-mobile .btn-fechar {
+    padding: 2rem 4%;
+}
+
+.menu-mobile .btn-fechar i {
+    color:#5C5C5C;
+    z-index: 1001;
+    font-size: 5rem;
+}
+
 /* FIM NAV BAR */
 
 /* HERO */
-/* USANDO GRID */
-/* .hero {
-    width: 75%;
-    padding: 5rem;
-    margin: 10rem auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-        "titulo job"
-        "paragrafo job";
-}
-
-.hero h1 {
-    color: var(--main-black);
-    font-size: var(--heading1);
-    font-weight: 550;
-    grid-area: titulo;
-}
-
-.hero h3 {
-    grid-area: paragrafo;
-    color: var(--main-gray);
-    font-size: var(--navigation);
-}
-
-.hero p {
-    color: var(--main-gray);
-    font-size: var(--heading2);
-    text-align: end;
-    grid-area: job;
-}
-
-.hero img {
-    width: 4rem;
-    padding-top: 5rem;
-} */
 
 .hero {
     width: 75%;
@@ -220,56 +239,21 @@ body {
 /* FIM PROJETOS */
 
 /* SOBRE MIM */
-/* USANDO GRID */
-
-/* .sobre-mim {
-    max-width: 70%;
-    max-height: 80vh;
-    margin: 5rem auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: flex-start;
-    grid-template-areas: 
-        "titulo foto"
-        "texto foto"
-        "texto foto";
-}
-
-.sobre-mim img {
-    width: 100%;
-    height: auto;
-    border-radius: 6rem;
-    transform: scale(0.7);
-    grid-area: foto;
-    align-self: flex-start;
-}
-
-.sobre-mim h2 {
-    font-size: var(--heading1);
-    grid-area: titulo;
-}
-
-.sobre-mim p {
-    font-size: 2.4rem;
-    padding-block: 2rem;
-    color: var(--main-gray);
-    grid-area: texto;
-}
-
-.texto-sobre-mim {
-    width: 70%;
-} */
 
 .sobre-mim {
     width: 70%;
     margin: 5rem auto;
     display: flex;
+    padding: 3rem;
 }
 
 .sobre-mim .esquerda {
     width: 50%;
     max-height: 70%;
+}
+
+.sobre-mim .direita {
+    width: 50%;
 }
 
 .sobre-mim .esquerda .titulo h2 {
@@ -283,14 +267,7 @@ body {
     color: var(--main-gray);
 }
 
-.sobre-mim .direita {
-    width: 50%;
-}
-
 .sobre-mim .direita img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 3rem;
     border-radius: 5rem;
     width: 100%;
@@ -353,5 +330,34 @@ footer h3 {
 }
 
 @media screen and (max-width: 1350px){
-    
+    .hero {
+        flex-direction: column;
+
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+    }
+
+    .hero-left img {
+        display: none;
+    }
+
+    .hero h1, h3 {
+        text-align: center;
+    }
+
+    .hero .hero-right p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .nav-menu {
+        display: none;
+    }
+
+    .btn-abrir-menu i {
+        display: initial;
+    }
 }

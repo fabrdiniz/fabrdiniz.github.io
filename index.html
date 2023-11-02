@@ -12,8 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+
 
     <title>fabr.</title>
 </head>
@@ -32,22 +36,33 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
+
+
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="btn-fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+
     </nav>
     <!-- FIM NAV BAR -->
 
     <!-- HERO -->
-    <!-- USANDO GRID -->
-    <!-- <div class="hero" id="home">
-        <h1>Olá, eu sou o<br>Fabrício Diniz.</h1>
-        <h3>(Desenvolvedor Front-End)</h3>
-        <p>Venha conhecer meu trabalho em desenvolvimento web 😀</p>
-        <a href="#projetos"><img src="./images/arrow_down_icon_125081.png" alt="Seta para baixo"></a>
-    </div> -->
 
     <!-- USANDO FLEXBOX -->
-    <div class="hero" id="hero">
-        <div class="hero-left">
+    <div class="hero" id="home">
+        <div class="hero-left"> 
             <h1>Olá, eu sou o<br>Fabrício Diniz.</h1>
             <h3>(Desenvolvedor Front-End)</h3>
             <a href="#projetos"><img src="./images/arrow_down_icon_125081.png" alt="Seta para baixo"></a>
@@ -76,7 +91,7 @@
         <!-- SEGUNDO PROJETO -->
         <div class="projeto-box">
             <div class="projeto-texto">
-                <h2>01 / HOTEL WEBSITE</h2>
+                <h2>02 / HOTEL WEBSITE</h2>
                 <p>Desenvolvi a página inicial de um site de reservas de hotéis, combinando HTML e CSS para criar uma interface intuitiva e atraente.</p>
                 <a href="https://github.com/fabrdiniz" target="_blank">Confira aqui esse projeto</a>
             </div>
@@ -104,17 +119,6 @@
 
 
     <!-- SOBRE MIM -->
-    <!-- USANDO GRID -->
-
-    <!-- <div class="sobre-mim" id="sobre"> 
-        <div class="texto-sobre-mim">
-            <h2>Um pouco sobre<br>mim...</h2>
-            <p>Sou o Fabrício, tenho 20 anos e estou cursando Análise e Desenvolvimento de Sistemas na FIAP. Desde criança, meu amor por tecnologia e inovação é o que me impulsiona a aprender mais e me apriomorar.</p>
-            <p>Trabalhei como editor de vídeos, aprendendo a importância de detalhes e criatividade. Agora, estou focado no desenvolvimento, empolgado para usar minha paixão por tecnologia em desafios reais!</p>
-        </div>
-        <img src="./images/faber.jpg" alt="Foto Fabrício Diniz">
-
-    </div> -->
 
     <div class="sobre-mim">
         <div class="esquerda">
@@ -150,6 +154,7 @@
         </ul>
     </footer>
 
+    <script src="./js/menu.js"></script>
 
 </body>
 </html>
