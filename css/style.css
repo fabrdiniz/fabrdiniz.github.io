@@ -86,9 +86,9 @@ body {
 /* FIM NAV BAR */
 
 /* HERO */
-
-.hero {
-    width: 73%;
+/* USANDO GRID */
+/* .hero {
+    width: 75%;
     padding: 5rem;
     margin: 10rem auto;
     display: grid;
@@ -118,9 +118,49 @@ body {
     grid-area: job;
 }
 
-.hero img { /* PRECISO AJUSTAR A ÁREA CLICÁVEL DA SETA */
+.hero img {
     width: 4rem;
     padding-top: 5rem;
+} */
+
+.hero {
+    width: 75%;
+    padding: 5rem;
+    margin: 10rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-left {
+    width: 50%;
+    padding: 1rem;
+}
+
+.hero-right {
+    width: 50%;
+    padding: 1rem;
+}
+
+.hero .hero-left h1 {
+    color: var(--main-black);
+    font-size: var(--heading1);
+    font-weight: 550;
+}
+
+.hero .hero-left h3 {
+    color: var(--main-gray);
+    font-size: var(--navigation);
+}
+
+.hero .hero-left img {
+    width: 6rem;
+    padding-top: 5rem;
+}
+
+.hero .hero-right p {
+    color: var(--main-gray);
+    font-size: var(--heading2);
+    text-align: end;
 }
 
 /* FIM HERO */
@@ -310,4 +350,8 @@ footer a {
 
 footer h3 {
     color: var(--main-black);
+}
+
+@media screen and (max-width: 1350px){
+    
 }
