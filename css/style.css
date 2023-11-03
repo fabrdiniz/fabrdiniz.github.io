@@ -92,8 +92,8 @@ body {
     font-size: 3rem;
     position: fixed;
     top: 0;
-    left: 0;
-    margin: 5.5rem 5%;
+    right: 0;
+    margin: 2.5rem 5%;
     display: none;
     z-index: 999;
 }
@@ -374,6 +374,30 @@ footer h3 {
     color: var(--main-black);
 }
 
+@media screen and (max-width: 1550px){
+    .sobre-mim {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-mim .esquerda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
 @media screen and (max-width: 1350px){
     .hero {
         flex-direction: column;
@@ -398,23 +422,59 @@ footer h3 {
     .projeto-box {
         flex-direction: column;
     }
-
+    
     .projeto-esquerda, .imagem-projeto {
         width: 100%;
     }
-
+    
     .imagem-projeto {
         padding-top: 2rem;
     }
-
+    
     .projeto-texto {
         align-items: center;
         justify-content: center;
+        width: 100%;
+        text-align: center;
     }
-
+    
     .projeto-esquerda {
         display: flex;
         justify-content: center;
+    }
+
+    .sobre-mim {
+        width: 100%;
+    }
+
+    .sobre-mim .esquerda .titulo h2 {
+        font-size: 4rem;
+    }
+
+    .sobre-mim .esquerda .texto p {
+        font-size: 2rem;
+    }
+
+    .contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    .contato h2 {
+        font-size: 4rem;
+    }
+
+    .botoes {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .botoes a {
+        margin: 2rem;
     }
 }
 
@@ -422,25 +482,33 @@ footer h3 {
     .nav-menu {
         display: none;
     }
-
+    
     .btn-abrir-menu i {
         display: initial;
     }
-
+    
     .hero .hero-left h1 {
         font-size: 4rem;
     }
-
+    
     .hero .hero-left h3 {
         font-size: 2rem;
     }
-
+    
     .hero .hero-right p {
         font-size: 2rem;
     }
-
+    
     .hero {
         width: 90%;
         padding-inline: 0;
+    }
+
+    .projeto-container {
+        width: 90%;
+    }
+
+    #menu {
+        padding: 2rem;
     }
 }
